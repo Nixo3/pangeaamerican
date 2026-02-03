@@ -14,7 +14,7 @@
                 rgba(0,0,0,0.55),
                 rgba(0,0,0,0.55)
             ),
-            url("background.jpg"); /* 👈 fondo historia/geografía */
+            url("background.jpg");
             background-size: cover;
             background-position: center;
             color: white;
@@ -48,7 +48,6 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        /* ✨ Animación hover */
         .image-box img:hover {
             transform: scale(1.08);
             box-shadow: 0 25px 45px rgba(0,0,0,0.8);
@@ -72,7 +71,25 @@
             transform: translateY(-3px);
         }
 
+        .project-description {
+            max-width: 900px;
+            margin: 80px auto 40px;
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
 
+        .quiz-button {
+            margin-top: 30px;
+            font-size: 18px;
+            padding: 18px 34px;
+        }
+
+        footer {
+            margin-top: 80px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -94,10 +111,24 @@
             </button>
         </div>
     </div>
-    
-            <footer>
-    Made by Nicolás Espinosa 2026 HTML
-</footer>
+
+    <!-- 📘 Descripción del proyecto -->
+    <div class="project-description">
+        <p>
+            This project explores the geographic evolution of the Earth, comparing the modern world map
+            with the ancient supercontinent known as Pangea. It also explains how geography influenced
+            the development of early civilizations, especially in Mesoamerica. Through images, explanations,
+            and interactive content, this website helps understand how Earth's changes shaped human history.
+        </p>
+
+        <button class="quiz-button" onclick="window.open('quiz.html', '_blank')">
+            Take the Quiz
+        </button>
+    </div>
+
+    <footer>
+        Made by Nicolás Espinosa 2026 HTML
+    </footer>
 
 </body>
 </html>
