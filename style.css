@@ -1,73 +1,100 @@
-/* INFO PAGES (Pangea + Civilizations) */
-.info-page {
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #1c2a1f, #0f1a12);
-    font-family: "Futura", Arial, sans-serif;
-    color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-}
-
-/* Caja central */
-.content-box {
-    max-width: 900px;
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 20px;
-    padding: 50px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.6);
-    animation: fadeIn 0.8s ease;
-}
-
-/* Títulos */
-.info-page h1 {
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    letter-spacing: 2px;
+    margin: 0;
+    padding: 40px;
 }
 
-.info-page h2 {
-    margin-top: 30px;
-    color: #9fd3a4;
+h1 {
+    font-size: 50px;
+    margin-bottom: 60px;
     letter-spacing: 1px;
 }
 
-/* Texto */
-.info-page p {
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-box img {
+    width: 700px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Animación hover */
+.image-box img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.8);
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #e3b23c;
+    color: #1b1b1b;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f1c453;
+    transform: translateY(-3px);
+}
+
+/* Descripción del proyecto */
+.project-description {
+    margin: 70px auto 0;
+    max-width: 900px;
+}
+
+.project-description p {
+    font-size: 18px;
     line-height: 1.7;
-    margin-top: 10px;
+    margin-bottom: 30px;
     opacity: 0.95;
 }
 
-/* Botón */
-button.back {
-    display: block;
-    margin: 50px auto 0;
-    padding: 14px 30px;
-    font-size: 16px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #3a7d44, #1f4d2b);
+/* Botón Quiz */
+.quiz-btn {
+    padding: 16px 38px;
+    font-size: 18px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #4e8b5a, #2d5f3a);
     color: white;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-button.back:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(120, 255, 160, 0.6);
+.quiz-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(120, 255, 180, 0.7);
 }
 
-/* Animación */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Footer */
+footer {
+    margin-top: 90px;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #e0e0e0;
+    opacity: 0.85;
 }
